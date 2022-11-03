@@ -619,6 +619,7 @@ img {
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	margin-bottom: 50px;
 }
 
 .search-form .search-btn:not(:last-child) {
@@ -636,11 +637,6 @@ img {
 	padding-right: 22px;
 }
 
-.search {
-	display: block;
-	text-align: center;
-	margin-bottom: 50px;
-}
 
 .search-btn {
 	text-align: center;
