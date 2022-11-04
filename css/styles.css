@@ -75,6 +75,8 @@ img {
 	border: none;
 	cursor: pointer;
 	display: inline-block;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -86,6 +88,10 @@ img {
 .active {
 	border-radius: 4px;
 	color: var(--title-text-color);
+
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-form .active:hover,
@@ -345,6 +351,8 @@ img {
 
 	color: var(--fill-color);
 	background-color: var(--white-color);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons {
@@ -402,6 +410,7 @@ img {
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
+	letter-spacing: 0.03em;
 	color: var(--white-color);
 	background-color: rgba(47, 48, 58, 0.8);
 }
@@ -423,7 +432,9 @@ img {
 	justify-content: center;
 	align-items: center;
 	gap: 30px;
+
 }
+
 
 .client-icon {
 	display: flex;
@@ -435,6 +446,9 @@ img {
 	border: 1px solid #AFB1B8;
 	border-radius: 4px;
 	color: var(--fill-color);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-item {
@@ -576,6 +590,8 @@ img {
 	align-items: center;
 	background-color: var(--footer-bg-svg-color);
 	color: var(--white-color);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-icon:hover,
@@ -596,6 +612,8 @@ img {
 .post-content-link {
 	text-decoration: none;
 	display: block;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .post-content-link:hover,
@@ -635,6 +653,8 @@ img {
 	padding-bottom: 6px;
 	padding-left: 22px;
 	padding-right: 22px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -681,4 +701,56 @@ img {
 .post-title {
 	font-size: 16px;
 	line-height: 1.88;
+}
+
+
+.overlay {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+}
+
+.overlay::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(33, 150, 243, 0.9);
+
+
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translateY(300px);
+}
+
+.content-overlay {
+	position: absolute;
+}
+
+.overlay-text {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.56;
+	color: var(--white-color);
+	letter-spacing: 0.03em;
+	width: 322px;
+
+
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translateY(300px);
+}
+
+.overlay:focus::before,
+.overlay:hover::before {
+
+	transform: translateY(0);
+}
+
+.overlay:focus .overlay-text,
+.overlay:hover .overlay-text {
+
+	transform: translateY(0);
 }
