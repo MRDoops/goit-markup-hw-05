@@ -150,13 +150,13 @@ img {
 	margin-bottom: -1px;
 	border-radius: 2px;
 
-	transform: scaleX(0);
+	transform: scale(0);
 	transition: transform var(--transition-ms-cubic);
 }
 
 .current-activ:hover::before,
 .current-activ:focus::before {
-	transform: scaleX(1);
+	transform: scale(1);
 }
 
 
